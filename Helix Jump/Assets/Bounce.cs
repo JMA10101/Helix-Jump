@@ -16,6 +16,6 @@ public class Bounce : MonoBehaviour
     void OnCollisionEnter(Collision c)
     {
         //transform.position = vPrevPos;
-        ball.AddForce(Vector3.up * force  * Time.deltaTime);
+        ball.AddForce(Vector3.up * force *1000 * Time.deltaTime);
     }
 }
