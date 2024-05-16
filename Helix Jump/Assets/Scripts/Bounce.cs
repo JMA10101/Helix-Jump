@@ -7,6 +7,10 @@ public class Bounce : MonoBehaviour
     public Rigidbody ball;
     public int force;
     private Vector3 startingPoint;
+    public GameObject topLayer;
+
+    
+    public int level;
 
     void Start()
     {
@@ -14,13 +18,13 @@ public class Bounce : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //vPrevPos = transform.position;
-        
+        int topHeight= Mathf.CeilToInt(topLayer.transform.position.y / 10.0f);
+        int currentY = Mathf.CeilToInt(ball.transform.position.y/10.0f);
+        level = topHeight - currentY;
 
     }
     void OnCollisionEnter(Collision c)
     {
-        //transform.position = vPrevPos;
         ball.AddForce(Vector3.up * force *1000 * Time.deltaTime);
         if (c.gameObject.layer==7)
         {
