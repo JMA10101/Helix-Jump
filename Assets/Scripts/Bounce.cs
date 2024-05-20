@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bounce : MonoBehaviour
 {
@@ -58,7 +59,8 @@ public class Bounce : MonoBehaviour
     {
         if (canDie)
         {
-            ball.gameObject.SetActive(false);
+            SceneManager.LoadScene(1);
+            //ball.gameObject.SetActive(false);
         }
 
     }

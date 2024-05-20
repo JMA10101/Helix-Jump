@@ -8,11 +8,12 @@ public class TowerTurning : MonoBehaviour
     public float sens = 30.0f;
     public GameObject layer;
     public bool useMouse = true;
+    public GameObject control;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        useMouse = control.CompareTag("Untagged");
     }
 
     // Update is called once per frame

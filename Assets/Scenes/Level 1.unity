@@ -1670,6 +1670,7 @@ MonoBehaviour:
   sens: 30
   layer: {fileID: 972422909}
   useMouse: 1
+  control: {fileID: 744002197788464310, guid: d6dbc84829fdb4bf586380408d9c6b57, type: 3}
 --- !u!4 &994553610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5359414479256174558, guid: d223cb04e690744ccb0128ee255d4954, type: 3}
