@@ -15,17 +15,19 @@ public class Bounce : MonoBehaviour
     public bool canDie = true;
     private Material startMaterial;
     public Material streakMaterial;
-
+    public static float timer;
 
 
 
     void Start()
     {
+        timer = 0.0f;
         startMaterial = ball.GetComponent<Renderer>().material;
         startingPoint = ball.transform.position;
     }
-    void FixedUpdate()
+    void Update()
     {
+        timer += Time.deltaTime;
         int topHeight= Mathf.CeilToInt(topLayer.transform.position.y / 10.0f);
         int currentY = Mathf.CeilToInt(ball.transform.position.y/10.0f);
         currentLevel = topHeight - currentY;

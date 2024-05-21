@@ -8,29 +8,35 @@ public class Menu : MonoBehaviour
 {
 
     public GameObject control;
-    public bool useMouse=true;
+    public static bool useMouse=true;
     public TMP_Text t;
+    public Slider slider;
+    public static float multiplier;
 
     // Start is called before the first frame update
     void Start()
     {
-        useMouse= control.CompareTag("Untagged");
+        slider.value = multiplier;
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        multiplier = slider.value;
+      
+        
         if (useMouse)
         {
             t.text = "Mouse";
-            control.tag = "Untagged";
+            
         }
         else
         {
             t.text = "Arrows";
-            control.tag = "Respawn";
         }
+        //control.transform.position = new Vector3(slider.value, 0, 0);
     }
 
     public void OnPlayButton()
@@ -52,5 +58,7 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    
 
 }
