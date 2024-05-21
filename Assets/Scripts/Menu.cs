@@ -48,4 +48,9 @@ public class Menu : MonoBehaviour
         useMouse = !useMouse;
        
     }
+    public void EndButton()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }

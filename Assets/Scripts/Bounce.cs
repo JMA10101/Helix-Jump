@@ -51,7 +51,7 @@ public class Bounce : MonoBehaviour
         ball.AddForce(Vector3.up * force *1000 * Time.deltaTime);
         if (c.gameObject.layer==7)
         {
-            ball.transform.position = startingPoint;
+            SceneManager.LoadScene(3);
         }
     }
 
@@ -59,7 +59,7 @@ public class Bounce : MonoBehaviour
     {
         if (canDie)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
             //ball.gameObject.SetActive(false);
         }
 
