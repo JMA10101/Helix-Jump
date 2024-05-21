@@ -57,7 +57,7 @@ public class Bounce : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (canDie)
+        if (canDie&&streak<3)
         {
             SceneManager.LoadScene(2);
             //ball.gameObject.SetActive(false);

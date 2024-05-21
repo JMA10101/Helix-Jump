@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerTurning : MonoBehaviour
 {
     public float speed = 200.0f;
-    public float sens = 30.0f;
+    public float sens = 40.0f;
     public GameObject layer;
     public bool useMouse = true;
     public GameObject control;
