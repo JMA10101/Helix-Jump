@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Bounce : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Bounce : MonoBehaviour
     private Material startMaterial;
     public Material streakMaterial;
     public static float timer;
-
+    public TMP_Text t;
 
 
     void Start()
@@ -27,6 +28,7 @@ public class Bounce : MonoBehaviour
     }
     void Update()
     {
+        t.text = timer.ToString("0.00");
         timer += Time.deltaTime;
         int topHeight= Mathf.CeilToInt(topLayer.transform.position.y / 10.0f);
         int currentY = Mathf.CeilToInt(ball.transform.position.y/10.0f);

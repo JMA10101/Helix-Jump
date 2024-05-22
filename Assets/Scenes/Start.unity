@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinValue: 0.5
   m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 1.02
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -502,10 +502,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   control: {fileID: 744002197788464310, guid: d6dbc84829fdb4bf586380408d9c6b57, type: 3}
-  useMouse: 1
   t: {fileID: 1703822785}
   slider: {fileID: 65136983}
-  multiplier: 0
+  time: {fileID: 0}
 --- !u!114 &646322249
 MonoBehaviour:
   m_ObjectHideFlags: 0
