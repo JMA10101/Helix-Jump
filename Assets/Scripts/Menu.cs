@@ -12,13 +12,13 @@ public class Menu : MonoBehaviour
     public TMP_Text t;
     public Slider slider;
     public static float multiplier;
-    public TMP_Text time;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         slider.value = multiplier;
-        time.text = (Bounce.timer).ToString("0.00");
+        
         
         
         //multiplier = slider.value;

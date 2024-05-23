@@ -17,6 +17,10 @@ public class TowerTurning : MonoBehaviour
         useMouse = Menu.useMouse;
         //multiplier = control.transform.position.x;
         multiplier = Menu.multiplier;
+        if (multiplier==0)
+        {
+            multiplier = 1;
+        }
     }
 
     // Update is called once per frame
